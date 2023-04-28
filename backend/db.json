@@ -1,0 +1,85 @@
+{
+  "viagens": [
+    {
+      "id": 1,
+      "nome": "Praia de Copacabana",
+      "preco": 899.99,
+      "imagem": "https://i0.hippopx.com/photos/679/859/646/landscape-city-rio-de-janeiro-sky-preview.jpg",
+      "rating": 4.5,
+      "descricao": "Uma das praias mais famosas do mundo, localizada no Rio de Janeiro",
+      "categoria": "Praias"
+    },
+    {
+      "id": 2,
+      "nome": "Torre Eiffel",
+      "preco": 1299.99,
+      "imagem": "https://s1.static.brasilescola.uol.com.br/be/2023/03/torre-eiffel.jpg",
+      "rating": 4.8,
+      "descricao": "Um dos monumentos mais famosos do mundo, localizado em Paris",
+      "categoria": "Pontos Turísticos"
+    },
+    {
+      "id": 3,
+      "nome": "Machu Picchu",
+      "preco": 1899.99,
+      "imagem": "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2021/08/49598_FB709B6C2250A9FB-1.jpg?w=876&h=484&crop=1",
+      "rating": 4.9,
+      "descricao": "Um sítio arqueológico icônico dos Incas, localizado no Peru",
+      "categoria": "Pontos Turísticos"
+    },
+    {
+      "id": 4,
+      "nome": "Safari na África",
+      "preco": 3999.99,
+      "imagem": "https://content.skyscnr.com/m/1444a77a4f004f9b/original/GettyImages-105286198.jpg",
+      "rating": 4.7,
+      "descricao": "Uma oportunidade para ver os animais selvagens em seu habitat natural, em um safári na África",
+      "categoria": "Aventuras"
+    },
+    {
+      "id": 5,
+      "nome": "Montanhas Rochosas",
+      "preco": 1499.99,
+      "imagem": "https://www.maladeaventuras.com/wp-content/uploads/2017/06/DSC3599-1-750x400.jpg",
+      "rating": 4.6,
+      "descricao": "Cenários de tirar o fôlego nas montanhas rochosas do Canadá",
+      "categoria": "Natureza"
+    },
+    {
+      "id": 6,
+      "nome": "Havaí",
+      "preco": 2199.99,
+      "imagem": "https://www.coladaweb.com/wp-content/uploads/2014/12/Praia-do-Hava%C3%AD.png",
+      "rating": 4.8,
+      "descricao": "Praias paradisíacas e paisagens exóticas no Havaí",
+      "categoria": "Praias"
+    },
+    {
+      "id": 7,
+      "nome": "Muralha da China",
+      "preco": 1599.99,
+      "imagem": "https://medicinachinesabr.com.br/wp-content/uploads/2020/05/w644-1.jpg",
+      "rating": 4.7,
+      "descricao": "Um marco histórico da China, com vistas espetaculares",
+      "categoria": "Pontos Turísticos"
+    },
+    {
+      "id": 8,
+      "nome": "New York",
+      "preco": 1699.99,
+      "imagem": "https://static.preparaenem.com/2023/02/vista-da-estatua-da-liberdade-com-os-edificios-da-cidade-de-nova-york-e-o-rio-hudson-ao-fundo.jpg",
+      "rating": 4.8,
+      "descricao": "O principal cartão postal estadunidense é a Estátua da Liberdade",
+      "categoria": "Pontos Turísticos"
+    },
+    {
+      "id": 9,
+      "nome": "Italia",
+      "preco": 1899.99,
+      "imagem": "https://conteudo.imguol.com.br/c/galeria/1e/2022/02/08/ponte-de-rialto-1644338286180_v2_900x506.jpg",
+      "rating": 4.8,
+      "descricao": "Os canais de Veneza",
+      "categoria": "Pontos Turísticos"
+    }
+  ]
+}
