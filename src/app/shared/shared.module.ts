@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material/material.module';
+import { ProductsCardComponent } from './products-card/products-card.component';
 
 
 
@@ -9,6 +10,9 @@ import { MaterialModule } from './material/material.module';
     CommonModule,
     MaterialModule
   ],
-  declarations: []
+  exports: [
+    ProductsCardComponent
+  ],
+  declarations: [ProductsCardComponent]
 })
 export class SharedModule { }
