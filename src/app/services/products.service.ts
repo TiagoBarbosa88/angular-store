@@ -8,7 +8,7 @@ import { Products } from '../shared/model/products';
 })
 export class ProductsService {
 
-baseUrl = 'https://fakestoreapi.com/products?limit=5';
+baseUrl = 'https://fakestoreapi.com/products';
 
 private readonly _products = new BehaviorSubject<Products[]>([])
 public products$ = this._products.asObservable()
