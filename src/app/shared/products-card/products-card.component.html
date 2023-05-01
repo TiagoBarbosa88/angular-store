@@ -1,10 +1,20 @@
 <div class="d-flex flex-wrap justify-content-center gap-4" *ngIf="products$ | async as products">
-  <div class="card mt-3 text-center d-flex align-items-center pt-2 pb-2" style="width: 10rem; height: 18rem;"
+  <div class="card mt-2 text-center d-flex align-items-center pt-1 pb-1" style="width: 9rem; height: 16rem;"
     *ngFor="let product of products">
-    <img src="{{ product.image }}" class="card-img-top w-50 " alt="...">
-    <div class="card-body text-center mt-3">
-      <h5 class="card-title">{{ product.title }}</h5>
-      <a href="#" class="btn btn-primary btn-sm ">Buy</a>
+    <div class="card-img mt-1">
+      <img src="{{ product.image }}" class="card-img-top">
+    </div>
+
+    <div class="card-title">
+      <h5>{{ product.title.slice(0, 30) }}</h5>
+    </div>
+
+    <div class="card-body text-center position-absolute w-100 mb-0">
+      <p><span>{{ product.price | currency: 'BRL' }}</span></p>
+      <button mat-raised-button color="primary" class="btn w-100 mb-0 ">
+        <span>Buy</span>
+        <mat-icon>add_shopping_cart</mat-icon>
+      </button>
     </div>
   </div>
 </div>
