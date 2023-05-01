@@ -11,7 +11,8 @@ import { ProductsCardComponent } from './products-card/products-card.component';
     MaterialModule
   ],
   exports: [
-    ProductsCardComponent
+    ProductsCardComponent,
+    MaterialModule
   ],
   declarations: [ProductsCardComponent]
 })
