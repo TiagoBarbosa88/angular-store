@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material/material.module';
 import { ProductsCardComponent } from './products-card/products-card.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 
@@ -14,6 +15,6 @@ import { ProductsCardComponent } from './products-card/products-card.component';
     ProductsCardComponent,
     MaterialModule
   ],
-  declarations: [ProductsCardComponent]
+  declarations: [ProductsCardComponent, ProductDetailsComponent]
 })
 export class SharedModule { }

@@ -1,0 +1,49 @@
+.content_card {
+  height: 90%;
+  width: 85%;
+  position: absolute;
+  padding: 1rem;
+}
+.content_image {
+  align-items: center;
+  border-radius: 5px;
+  width: 45%;
+  height: 90%;
+  box-shadow: 0px 4px 8px -2px #3f3e3e40;
+  transition: .5s;
+  margin-right: 1rem;
+  cursor: pointer;
+  border: 1px green solid;
+}
+
+.content_image:hover {
+  box-shadow: 10px 10px 22px 0px #3f3e3e40;
+  transition: .5s;
+}
+
+
+
+.image {
+  align-items: center;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+
+.content_body{
+  border: 1px red solid;
+  width: 45%;
+  height: 90%;
+}
+
+.content_description {
+  width: 95%;
+}
+
+.content_button {
+  border: 1px salmon solid;
+  height: 15%;
+  width: 70%;
+}
+
+
