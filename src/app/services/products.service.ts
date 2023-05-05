@@ -26,5 +26,20 @@ returnAllProducts(){
   })
 }
 
+getById(id: string | null):Observable<Products[]>{
+  return this.http.get<Products[]>(`${this.baseUrl}/${id}`)
+}
+
+returnProductById(id: string | null){
+  return this.getById(id).subscribe( data => {
+    this._products.next(data)
+
+    console.log(data)
+  } )
+}
+
+
+
+
 
 }
