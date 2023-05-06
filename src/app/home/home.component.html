@@ -1,4 +1,3 @@
-<div class="container" >
-  <app-products-card></app-products-card>
-
+<div class="container">
+  <app-products-card *ngIf="products$ | async as products" [products$]="products$" (click)="event()" />
 </div>

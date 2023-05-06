@@ -5,19 +5,16 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'products',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
-
   {
     path: 'products',
-    loadChildren: () =>
-      import('./home/home.module').then(m => m.ProductsModule)
-  }
-
+    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
