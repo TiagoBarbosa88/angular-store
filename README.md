@@ -9,6 +9,11 @@ Com o uso dessas tecnologias, podemos desenvolver um front-end robusto, fácil d
 O objetivo deste projeto é criar uma solução eficiente e escalável que ofereça uma experiência de usuário incrível e funcional para os clientes. 
 </p>
 
+# Home
+<p align="center">
+  <img alt="angular-store" src="https://raw.githubusercontent.com/TiagoBarbosa88/angular-store/main/src/assets/home.png" width="100%">  
+</p>
+
 ## 💻 Tecnológias
 
 - Angular
@@ -25,6 +30,6 @@ Projeto em desenvolvimento
 - [x] ListProductForId, listando produto por ID 
 </p>
 
-<p align="center">
-  <img alt="angular-store" src="" width="100%">  
-</p>
+## Deploy
+[Acessar Página](https://angular-store-six.vercel.app/products)
+
