@@ -13,8 +13,8 @@
     <div class="card-body text-center position-absolute w-100 mb-0">
       <p><span>{{ product.price | currency: 'BRL' }}</span></p>
 
-      <button mat-raised-button color="primary" class="btn w-100 mb-0 ">
-        <span>Buy</span>
+      <button mat-raised-button color="primary" class="btn w-100 mb-0" (clicl)="onAddToCartClicked(product.id)">
+        <span>Cart</span>
         <mat-icon>add_shopping_cart</mat-icon>
       </button>
 

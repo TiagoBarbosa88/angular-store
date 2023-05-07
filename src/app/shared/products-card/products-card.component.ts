@@ -13,8 +13,9 @@ export class ProductsCardComponent implements OnInit {
 
 
   @Input() products$!: Observable<Products[]>;
-
   @Output() imageClicked = new EventEmitter();
+
+  @Output() addToCartClicked  = new EventEmitter();
 
   constructor(private productsService: ProductsService
     ) {}
@@ -25,6 +26,13 @@ export class ProductsCardComponent implements OnInit {
 
   public navigateById(id: string | null) {
     return this.imageClicked.emit(id);
+  }
+
+  public onAddToCartClicked(id: string | null){
+    this.addToCartClicked.emit(id)
+    console.log(id);
 
   }
+
+
 }

@@ -29,4 +29,6 @@ export class HomeComponent implements OnInit {
   public navigateById(id: string | null) {
     return this.router.navigate([`products/details/${id}`]);
   }
+
+ 
 }
