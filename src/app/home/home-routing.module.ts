@@ -5,15 +5,15 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 
 const routes: Routes = [
   {
-    path: 'details',
+    path: 'details/:id',
     component: ProductDetailsComponent,
   },
   {
-    path: 'home',
+    path: '',
     component: HomeComponent,
   },
   {
-    path: '',
+    path: '**',
     component: HomeComponent,
   },
 ];

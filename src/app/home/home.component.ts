@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { ProductsService } from '../services/products.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -8,16 +9,24 @@ import { ProductsService } from '../services/products.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  id!: string | null;
+  idSubscription!: Subscription;
+
   public products$ = this.productService.products$;
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private productService: ProductsService
   ) {}
 
-  public ngOnInit() {}
+  ngOnInit(): void {
+    this.idSubscription = this.route.paramMap.subscribe((params: ParamMap) => {
+      this.id = params.get('id');
+    });
+  }
 
-  public event() {
-    this.router.navigate(['products/details']);
+  public event(id: string | null) {
+    return this.router.navigate([`products/details/${id}`]);
   }
 }

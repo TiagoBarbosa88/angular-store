@@ -1,6 +1,7 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { ProductsService } from '../../services/products.service';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
+
+import { ProductsService } from '../../services/products.service';
 import { Products } from '../model/products';
 
 @Component({
@@ -9,17 +10,21 @@ import { Products } from '../model/products';
   styleUrls: ['./products-card.component.scss'],
 })
 export class ProductsCardComponent implements OnInit {
+
+
   @Input() products$!: Observable<Products[]>;
 
   @Output() click = new EventEmitter();
 
-  constructor(private productsService: ProductsService) {}
+  constructor(private productsService: ProductsService
+    ) {}
 
   public ngOnInit() {
     this.productsService.returnAllProducts();
   }
 
-  public event() {
-    return this.click.emit();
+  public event(id: string | null) {
+    return this.click.emit(id);
+
   }
 }

@@ -2,7 +2,7 @@
   <div class="card mt-2 text-center d-flex align-items-center pt-1 pb-1" style="width: 9rem; height: 16rem;"
     *ngFor="let product of products">
     <div class="card-img mt-1">
-      <img (click)="event()" src="{{ product.image }}" class="card-img-top"
+      <img (click)="event(product.id)" src="{{ product.image }}" class="card-img-top"
         title="See more info - {{ product.title.slice(0, 30) }}">
     </div>
 

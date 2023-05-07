@@ -1,26 +1,26 @@
-<div class="content_card d-flex">
-  <div class="content_image">
-    <img class="image" src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg" alt="Mens Casual Slim Fit">
+<div class="content_card d-flex" *ngIf="idSubject$ | async as product">
+
+  <div class="content_image" >
+    <img class="image" src="{{ product.image }}" alt=" {{ product.title }}" title="Photo {{ product.title }}">
   </div>
 
   <div class="content_body d-flex flex-column">
     <div class="content_title">
-      <h1>Mens Casual Slim Fit</h1>
+      <h1>{{ product.title }}</h1>
     </div>
     <div class="content_category">
-      <h4><strong>Categoria:</strong>  Men's clothing"</h4>
+      <h4><strong>Categoria:</strong> {{ product.category }}</h4>
     </div>
     <div class="content_description">
       <h3><strong>Description</strong></h3>
       <hr>
       <p>
-        The color could be slightly different between on the screen and in practice. Please note that body builds vary
-        by person, therefore, detailed size information should be reviewed below on the product description.
+        {{ product.description }}
       </p>
     </div>
     <div class="content_price mt-2 d-flex w-100 justify-content-between">
-      <span><strong>Price </strong>R$ 299</span>
-      <span><strong>Count </strong>400</span>
+      <span><strong>Price </strong>>{{ product.price | currency: 'BRL' }}</span>
+      <span><strong>Count </strong>{{ product.rating.count }}</span>
     </div>
     <div class="content_button mt-2 d-flex justify-content-between w-100">
       <button mat-raised-button color="primary">Add Cart</button>
