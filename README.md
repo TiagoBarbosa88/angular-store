@@ -1,4 +1,4 @@
-# AnimaBlog2
+# Angular Store
 
 ## 💻 Project
 
