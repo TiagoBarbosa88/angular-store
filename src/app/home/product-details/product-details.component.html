@@ -19,16 +19,15 @@
       </p>
     </div>
     <div class="content_price mt-2 d-flex w-100 justify-content-between">
-      <span><strong>Price </strong>>{{ product.price | currency: 'BRL' }}</span>
+      <span><strong>Price </strong>{{ product.price | currency: 'BRL' }}</span>
       <span><strong>Count </strong>{{ product.rating.count }}</span>
     </div>
     <div class="content_button mt-2 d-flex justify-content-between w-100">
       <button mat-raised-button color="primary">Add Cart</button>
-      <div class="star">
-        <span><mat-icon>star_rate_half</mat-icon></span>
-        <span><mat-icon>star_rate_half</mat-icon></span>
-        <span><mat-icon>star_rate_half</mat-icon></span>
-        <span><mat-icon>star_rate</mat-icon></span>
+      <div class="rate">
+        <span><strong>{{ product.rating.rate }}</strong></span>
+        <span><mat-icon class="star">star_rate_half</mat-icon></span>
+
       </div>
     </div>
   </div>

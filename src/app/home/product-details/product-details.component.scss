@@ -23,7 +23,7 @@
 
 
 .image {
-  align-items: center;
+  margin-top: 5%;
   max-width: 90%;
   max-height: 90%;
 }
@@ -44,7 +44,13 @@
   width: 70%;
 }
 
+.rate {
+  display: flex;
+  align-items: center;
+}
+
 .star {
+  margin-left: 10px;
   color: rgb(238, 215, 13);
 }
 
@@ -82,7 +88,15 @@
     margin-top: 1rem;
   }
 
+  .content_price {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
   .content_button {
     align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
   }
 }
