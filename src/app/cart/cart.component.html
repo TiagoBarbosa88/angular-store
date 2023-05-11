@@ -3,27 +3,33 @@
     <div class="text-center">
       <h1><strong>Angular Cart</strong></h1>
     </div>
-    <div class="content_product d-flex">
-      <div class="cart_image">
+    <div class="content_product d-flex flex-column align-items-center w-100">
+      <div class="cart_image w-25 mb-2">
         <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
       </div>
-      <div class="content_description d-flex align-content-center">
+      <div class="content_description">
         <div class="content_title">
-          <span>
+          <span><h3>
             <p>jallraven - Foldsack No. 1 Backpack</p>
+          </h3>
           </span>
+        </div>
+        <div class="content_qtd d-flex justify-content-around align-content-center">
+          <label for="qtd" class="fs-5">Quantidade</label>
+          <input type="number" id="qtd" value="1" class="form-control quantity-input w-25">
         </div>
       </div>
     </div>
+    <hr>
 
     <!-- lado direito -->
 
-    <div class="container_total d-flex flex-column w-100">
+    <div class="container_total d-flex flex-column w-100 bg-light">
       <div class="text-center fs-3">
         <h1><strong>Cart Total</strong></h1>
       </div>
       <div class="content_cart_total d-flex flex-column w-75 align-self-center">
-      <div class="content_subtotal d-flex justify-content-between fs-5">
+      <div class="content_subtotal d-flex justify-content-between fs-4">
         <span><p>Subtotal</p></span>
         <span>R$ 100,00</span>
       </div>
@@ -44,6 +50,9 @@
         <span><p><strong>R$ 90,00 </strong></p></span>
       </div>
       <hr>
+      <div>
+        <button type="button" class="btn btn-primary w-100">Checkout</button>
+      </div>
       </div>
     </div>
 

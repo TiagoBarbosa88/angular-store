@@ -2,13 +2,17 @@
   display: flex;
   flex-direction: column;
 }
-.cart_image {
-  width: 20%;
-  height: 20%;
-}
 
 .cart_image > img {
   width: 100%;
   height: 100%;
 }
 
+
+.content_product {
+  border: 1px solid blue;
+}
+
+.content_qtd {
+  border: 1px solid red;
+}
