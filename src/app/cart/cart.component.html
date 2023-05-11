@@ -1,13 +1,13 @@
 <div class="container">
+  <div class="text-center">
+    <h1><strong>Angular Cart</strong></h1>
+  </div>
+  <!-- Começo do cart -->
   <div class="content_card">
-    <div class="text-center">
-      <h1><strong>Angular Cart</strong></h1>
-    </div>
     <div class="content_product d-flex align-items-center w-100">
       <div class="cart_image mb-2">
         <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
       </div>
-
       <div class="content_title">
         <span>
           <h4>
@@ -26,56 +26,59 @@
       <div class="content_remove text-secondary">
         <mat-icon class="mat-18">delete</mat-icon>
       </div>
-
     </div>
     <hr>
+  </div>
 
-    <!-- lado direito -->
+  <!-- Fim Card -->
 
-    <div class="container_total d-flex flex-column w-100 bg-light">
-      <div class="text-center fs-3">
-        <h1><strong>Cart Total</strong></h1>
+
+  <!-- lado direito -->
+
+  <div class="container_total d-flex flex-column w-100 bg-light">
+    <div class="text-center fs-3">
+      <h1><strong>Cart Total</strong></h1>
+    </div>
+    <div class="content_cart_total d-flex flex-column w-75 align-self-center">
+      <div class="content_subtotal d-flex justify-content-between fs-4">
+        <span>
+          <p>Subtotal</p>
+        </span>
+        <span>R$ 100,00</span>
       </div>
-      <div class="content_cart_total d-flex flex-column w-75 align-self-center">
-        <div class="content_subtotal d-flex justify-content-between fs-4">
-          <span>
-            <p>Subtotal</p>
-          </span>
-          <span>R$ 100,00</span>
-        </div>
-        <hr>
-        <div class="content_desc d-flex justify-content-between fs-5">
-          <span>
-            <p>Desconto</p>
-          </span>
-          <span>
-            <p>R$ 10,00</p>
-          </span>
-        </div>
-        <hr>
-        <div class="content_envio d-flex justify-content-between fs-5">
+      <hr>
+      <div class="content_desc d-flex justify-content-between fs-5">
+        <span>
+          <p>Desconto</p>
+        </span>
+        <span>
+          <p>R$ 10,00</p>
+        </span>
+      </div>
+      <hr>
+      <div class="content_envio d-flex justify-content-between fs-5">
 
-          <span>
-            <p>Envio</p>
-          </span>
-          <span>R$ - </span>
-        </div>
-        <hr>
-        <div class="content_total d-flex justify-content-between fs-5">
-          <span>
-            <p><strong>Total</strong></p>
-          </span>
-          <span>
-            <p><strong>R$ 90,00 </strong></p>
-          </span>
-        </div>
-        <hr>
-        <div>
-          <button type="button" class="btn btn-primary w-100">Checkout</button>
-        </div>
+        <span>
+          <p>Envio</p>
+        </span>
+        <span>R$ - </span>
+      </div>
+      <hr>
+      <div class="content_total d-flex justify-content-between fs-5">
+        <span>
+          <p><strong>Total</strong></p>
+        </span>
+        <span>
+          <p><strong>R$ 90,00 </strong></p>
+        </span>
+      </div>
+      <hr>
+      <div>
+        <button type="button" class="btn btn-primary w-100">Checkout</button>
       </div>
     </div>
-
-    <!-- Fim Card -->
   </div>
+
+
+
 </div>
