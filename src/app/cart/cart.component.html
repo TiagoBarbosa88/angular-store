@@ -3,32 +3,39 @@
     <h1><strong>Angular Cart</strong></h1>
   </div>
   <!-- Começo do cart -->
-  <div class="content_card">
-    <div class="content_product d-flex align-items-center w-100">
+  <div class="content_card ">
+    <div class="content_product d-flex align-items-center w-100 mb-2">
       <div class="cart_image mb-2">
         <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
       </div>
-      <div class="content_title">
-        <span>
-          <h4>
-            jallraven - Foldsack No. 1 Backpack
-          </h4>
-        </span>
-      </div>
-      <div class="content_qtd d-flex align-content-center justify-content-around w-25 ms-2">
-        <label><mat-icon class="mat-18">remove</mat-icon></label>
-        <input type="number" id="qtd" value="10" class="w-50 border">
-        <label><mat-icon class="mat-18">add</mat-icon></label>
-      </div>
-      <div class="content_price w-25 ms-4">
-        <span>R$ 100,00</span>
-      </div>
-      <div class="content_remove text-secondary">
-        <mat-icon class="mat-18">delete</mat-icon>
+      <div class="content_body d-flex flex-column">
+        <div class="content_title w-100">
+          <span>
+            <h4>
+              jallraven - Foldsack No. 1 Backpack
+            </h4>
+          </span>
+        </div>
+        <div class="content_qtd d-flex align-content-center justify-content-around w-100 ms-2">
+          <label><mat-icon class="mat-18">remove</mat-icon></label>
+          <p class="fs-6">10</p>
+          <label><mat-icon class="mat-18">add</mat-icon></label>
+
+          <div class="content_price w-25 ms-4">
+            <span class="fs-8">R$ 100,00</span>
+          </div>
+          <div class="content_remove text-secondary">
+            <mat-icon class="mat-18">delete</mat-icon>
+          </div>
+        </div>
+
+
       </div>
     </div>
     <hr>
   </div>
+
+
 
   <!-- Fim Card -->
 
@@ -40,14 +47,14 @@
       <h1><strong>Cart Total</strong></h1>
     </div>
     <div class="content_cart_total d-flex flex-column w-75 align-self-center">
-      <div class="content_subtotal d-flex justify-content-between fs-4">
+      <div class="content_subtotal d-flex justify-content-between fs-6">
         <span>
           <p>Subtotal</p>
         </span>
         <span>R$ 100,00</span>
       </div>
       <hr>
-      <div class="content_desc d-flex justify-content-between fs-5">
+      <div class="content_desc d-flex justify-content-between fs-6">
         <span>
           <p>Desconto</p>
         </span>
@@ -56,7 +63,7 @@
         </span>
       </div>
       <hr>
-      <div class="content_envio d-flex justify-content-between fs-5">
+      <div class="content_envio d-flex justify-content-between fs-6">
 
         <span>
           <p>Envio</p>
@@ -64,7 +71,7 @@
         <span>R$ - </span>
       </div>
       <hr>
-      <div class="content_total d-flex justify-content-between fs-5">
+      <div class="content_total d-flex justify-content-between fs-6">
         <span>
           <p><strong>Total</strong></p>
         </span>
