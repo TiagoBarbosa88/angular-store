@@ -10,3 +10,9 @@ export interface Products {
     count: number;
   };
 }
+
+
+export interface Category {
+  name: string;
+  link: string;
+}
