@@ -11,7 +11,6 @@ export interface Products {
   };
 }
 
-
 export interface Category {
   name: string;
   link: string;

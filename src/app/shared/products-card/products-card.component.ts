@@ -10,29 +10,24 @@ import { Products } from '../model/products';
   styleUrls: ['./products-card.component.scss'],
 })
 export class ProductsCardComponent implements OnInit {
-
-
+  @Input() category!: string | null;
   @Input() products$!: Observable<Products[]>;
+
   @Output() imageClicked = new EventEmitter();
+  @Output() addToCartClicked = new EventEmitter();
 
-  @Output() addToCartClicked  = new EventEmitter();
-
-  constructor(private productsService: ProductsService
-    ) {}
+  constructor(private productsService: ProductsService) {}
 
   public ngOnInit() {
-    this.productsService.returnAllProducts();
+    this.productsService.returnAllProducts(this.category!);
   }
 
   public navigateById(id: string | null) {
     return this.imageClicked.emit(id);
   }
 
-  public onAddToCartClicked(id: string | null){
-    this.addToCartClicked.emit(id)
+  public onAddToCartClicked(id: string | null) {
+    this.addToCartClicked.emit(id);
     console.log(id);
-
   }
-
-
 }

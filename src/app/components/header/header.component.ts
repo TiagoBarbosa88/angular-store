@@ -18,11 +18,11 @@ export class HeaderComponent {
     },
     {
       name: "Men's clothing",
-      link: 'products/category/mens-clothing',
+      link: `products/category/men's clothing`,
     },
     {
       name: "Women's clothing",
-      link: 'products/category/women-clothing',
+      link: `products/category/women's clothing`,
     },
   ];
 }

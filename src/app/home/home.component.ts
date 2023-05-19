@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { ProductsService } from '../services/products.service';
 import { Subscription } from 'rxjs';
+import { ProductsService } from '../services/products.service';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +9,10 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  id!: string | null;
-  idSubscription!: Subscription;
-
   public products$ = this.productService.products$;
+
+  public category!: string | null;
+  public categorySubscription!: Subscription;
 
   constructor(
     private router: Router,
@@ -21,14 +21,19 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.idSubscription = this.route.paramMap.subscribe((params: ParamMap) => {
-      this.id = params.get('id');
-    });
+    // metodo que esta se inscrevendo na rota para obter o parametro (categoria)
+    this.categorySubscription = this.route.paramMap.subscribe(
+      (params: ParamMap) => {
+        this.category = params.get('category');
+        console.log(this.category);
+
+        this.productService.returnAllProducts(this.category);
+      }
+    );
   }
 
+  // navega para a tela de detalhe atraves do ID
   public navigateById(id: string | null) {
     return this.router.navigate([`products/details/${id}`]);
   }
-
- 
 }

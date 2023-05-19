@@ -10,17 +10,15 @@
   width: 45%;
   height: 90%;
   box-shadow: 0px 4px 8px -2px #3f3e3e40;
-  transition: .5s;
+  transition: 0.5s;
   margin-right: 1rem;
   cursor: pointer;
 }
 
 .content_image:hover {
   box-shadow: 10px 10px 22px 0px #3f3e3e40;
-  transition: .5s;
+  transition: 0.5s;
 }
-
-
 
 .image {
   margin-top: 5%;
@@ -28,8 +26,7 @@
   max-height: 90%;
 }
 
-
-.content_body{
+.content_body {
   width: 45%;
   height: 90%;
 }

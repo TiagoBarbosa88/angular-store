@@ -1,9 +1,19 @@
-<div class="d-flex flex-wrap justify-content-center gap-4" *ngIf="products$ | async as products">
-  <div class="card mt-2 text-center d-flex align-items-center pt-1 pb-1" style="width: 9rem; height: 16rem;"
-    *ngFor="let product of products">
+<div
+  class="d-flex flex-wrap justify-content-center gap-4"
+  *ngIf="products$ | async as products"
+>
+  <div
+    class="card mt-2 text-center d-flex align-items-center pt-1 pb-1"
+    style="width: 9rem; height: 16rem"
+    *ngFor="let product of products"
+  >
     <div class="card-img mt-1">
-      <img (click)="navigateById(product.id)" src="{{ product.image }}"
-        title="See more info - {{ product.title.slice(0, 30) }}" class="card-img-top">
+      <img
+        (click)="navigateById(product.id)"
+        src="{{ product.image }}"
+        title="See more info - {{ product.title.slice(0, 30) }}"
+        class="card-img-top"
+      />
     </div>
 
     <div class="card-title">
@@ -11,13 +21,19 @@
     </div>
 
     <div class="card-body text-center position-absolute w-100 mb-0">
-      <p><span>{{ product.price | currency: 'BRL' }}</span></p>
+      <p>
+        <span>{{ product.price | currency : "BRL" }}</span>
+      </p>
 
-      <button mat-raised-button color="primary" class="btn w-100 mb-0" (clicl)="onAddToCartClicked(product.id)">
+      <button
+        mat-raised-button
+        color="primary"
+        class="btn w-100 mb-0"
+        (clicl)="onAddToCartClicked(product.id)"
+      >
         <span>Cart</span>
         <mat-icon>add_shopping_cart</mat-icon>
       </button>
-
     </div>
   </div>
 </div>
