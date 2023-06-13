@@ -2,7 +2,8 @@
   <div class="content_image">
     <img
       class="image"
-      src="{{ product.image }}"
+      src="{{ product.images[1] }}"
+
       alt=" {{ product.title }}"
       title="Photo {{ product.title }}"
     />
@@ -13,7 +14,7 @@
       <h1>{{ product.title }}</h1>
     </div>
     <div class="content_category">
-      <h4><strong>Categoria:</strong> {{ product.category }}</h4>
+      <h4><strong>Categoria:</strong> {{ product.category.name }}</h4>
     </div>
     <div class="content_description">
       <h3><strong>Description</strong></h3>

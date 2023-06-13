@@ -7,8 +7,11 @@ import { Products } from '../shared/model/products';
   providedIn: 'root',
 })
 export class ProductsService {
-  baseUrl = 'https://fakestoreapi.com/products';
-  baseCategory = 'https://fakestoreapi.com/products/category';
+  baseUrl = 'https://api.escuelajs.co/api/v1/products';
+  baseCategory = 'https://api.escuelajs.co/api/v1/categories';
+
+  // baseUrl = 'https://fakestoreapi.com/products';
+  // baseCategory = 'https://fakestoreapi.com/products/category';
 
   private readonly _products = new BehaviorSubject<Products[]>([]);
   public products$ = this._products.asObservable();
