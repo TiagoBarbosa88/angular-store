@@ -7,7 +7,7 @@ export interface Products {
     id: number;
     name: string
   };
-  images: string;
+  image: string;
   rating: {
     rate: number;
     count: number;

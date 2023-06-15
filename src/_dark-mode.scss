@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import './dark-mode';
+
 
 html,
 body {
@@ -12,3 +12,15 @@ body {
 
 
 
+.dark-mode {
+  background-color: rgb(70, 67, 67);
+  color: white;
+}
+
+.nav-dark {
+  background-color: rgb(26, 25, 25);
+}
+
+.icon-dark{
+  color: white;
+}

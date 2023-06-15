@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ToogleThemeService } from 'src/app/services/toogle-theme.service';
 import { Category } from 'src/app/shared/model/products';
 
 @Component({
@@ -6,7 +7,13 @@ import { Category } from 'src/app/shared/model/products';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
+
+  constructor(public darkMode: ToogleThemeService){}
+
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
   categories: Category[] = [
     {
       name: 'Electronics',

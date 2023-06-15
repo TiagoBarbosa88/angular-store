@@ -10,7 +10,9 @@ export class ToogleThemeService {
 
   constructor() { }
 
-  public setDarkMode(){
+  public darkMode(){
    return this.isDarkMode = !this.isDarkMode
   }
+
+
 }
