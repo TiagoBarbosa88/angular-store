@@ -1,23 +1,42 @@
-<nav class="navbar navbar-expand-lg navbar-dark " [ngClass]="darkMode.isDarkMode ? 'nav-dark' : 'bg-primary' ">
+<nav
+  class="navbar navbar-expand-lg navbar-dark"
+  [ngClass]="darkMode.isDarkMode ? 'nav-dark' : 'bg-primary'"
+>
   <div class="container-fluid">
     <a class="navbar-brand" routerLink="">Store</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-      data-bs-parent="#navbarSupportedContent">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      data-bs-parent="#navbarSupportedContent"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent" data-bs-parent="#navbarSupportedContent">
+    <div
+      class="collapse navbar-collapse"
+      id="navbarSupportedContent"
+      data-bs-parent="#navbarSupportedContent"
+    >
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item" *ngFor="let category of categories">
           <a class="nav-link" routerLink="{{ category.link }}">{{
             category.name
-            }}</a>
+          }}</a>
         </li>
       </ul>
       <div class="cart">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-light me-2">
           <li class="me-2">
             <mat-icon>shopping_cart</mat-icon>
+            <span
+              class="position-absolute translate-middle badge rounded-pill bg-danger"
+            >
+              {{ cartService.productsCart.length }}
+            </span>
           </li>
           <li class="me-2">
             <a routerLink="/login" class="login text-light">
@@ -27,9 +46,18 @@
         </ul>
       </div>
       <div class="toogle__mode">
-        <button type="checkbox" mat-icon-button class="icon-dark" (click)="darkMode.darkMode()">
-          <mat-icon class="mat-18 icon-dark" *ngIf="!darkMode.isDarkMode">dark_mode</mat-icon>
-          <mat-icon class="mat-18 icon-dark" *ngIf="darkMode.isDarkMode">light_mode</mat-icon>
+        <button
+          type="checkbox"
+          mat-icon-button
+          class="icon-dark"
+          (click)="darkMode.darkMode()"
+        >
+          <mat-icon class="mat-18 icon-dark" *ngIf="!darkMode.isDarkMode"
+            >dark_mode</mat-icon
+          >
+          <mat-icon class="mat-18 icon-dark" *ngIf="darkMode.isDarkMode"
+            >light_mode</mat-icon
+          >
         </button>
       </div>
     </div>

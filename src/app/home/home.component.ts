@@ -3,7 +3,6 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ProductsService } from '../services/products.service';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -18,9 +17,7 @@ export class HomeComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private productService: ProductsService,
-
-
+    private productService: ProductsService
   ) {}
 
   ngOnInit(): void {

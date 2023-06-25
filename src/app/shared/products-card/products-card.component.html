@@ -31,7 +31,7 @@
         class="btn w-100 mb-0"
         (clicl)="onAddToCartClicked(product.id)"
       >
-        <span>Cart</span>
+        <span (click)="addToCart(product)">Cart</span>
         <mat-icon>add_shopping_cart</mat-icon>
       </button>
     </div>

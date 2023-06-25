@@ -1,18 +1,14 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ToogleThemeService {
+  public isDarkMode = false;
 
+  constructor() {}
 
-  public isDarkMode = true
-
-  constructor() { }
-
-  public darkMode(){
-   return this.isDarkMode = !this.isDarkMode
+  public darkMode() {
+    return (this.isDarkMode = !this.isDarkMode);
   }
-
-
 }

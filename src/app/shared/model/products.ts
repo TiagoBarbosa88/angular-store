@@ -5,7 +5,7 @@ export interface Products {
   description: string;
   category: {
     id: number;
-    name: string
+    name: string;
   };
   image: string;
   rating: {
@@ -17,4 +17,14 @@ export interface Products {
 export interface Category {
   name: string;
   link: string;
+}
+
+export interface CartModel {
+  title: string;
+  price: number;
+  category: {
+    id: number;
+    name: string;
+  };
+  image: string;
 }

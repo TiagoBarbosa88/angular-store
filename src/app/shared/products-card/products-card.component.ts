@@ -2,7 +2,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { ProductsService } from '../../services/products.service';
-import { Products } from '../model/products';
+import { Products, CartModel } from '../model/products';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-products-card',
@@ -16,7 +17,10 @@ export class ProductsCardComponent implements OnInit {
   @Output() imageClicked = new EventEmitter();
   @Output() addToCartClicked = new EventEmitter();
 
-  constructor(private productsService: ProductsService) {}
+  constructor(
+    private productsService: ProductsService,
+    public cartService: CartService
+  ) {}
 
   public ngOnInit() {
     this.productsService.returnAllProducts(this.category!);
@@ -29,5 +33,9 @@ export class ProductsCardComponent implements OnInit {
   public onAddToCartClicked(id: string | null) {
     this.addToCartClicked.emit(id);
     console.log(id);
+  }
+
+  public addToCart(product: CartModel) {
+    this.cartService.addCartModel(product);
   }
 }

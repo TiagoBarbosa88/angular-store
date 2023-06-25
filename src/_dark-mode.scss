@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-
 html,
 body {
   height: 100%;
@@ -10,10 +9,8 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-
-
 .dark-mode {
-  background-color: rgb(70, 67, 67);
+  background-color: rgb(58, 57, 57);
   color: white;
 }
 
@@ -21,6 +18,6 @@ body {
   background-color: rgb(26, 25, 25);
 }
 
-.icon-dark{
+.icon-dark {
   color: white;
 }

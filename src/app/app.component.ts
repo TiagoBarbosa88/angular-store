@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ToogleThemeService } from './services/toogle-theme.service';
 
 @Component({
@@ -6,11 +6,8 @@ import { ToogleThemeService } from './services/toogle-theme.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
+  constructor(public darkMode: ToogleThemeService) {}
 
-  constructor(public darkMode: ToogleThemeService){}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
   title = 'angular-store';
 }
