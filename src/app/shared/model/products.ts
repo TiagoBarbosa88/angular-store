@@ -22,9 +22,10 @@ export interface Category {
 export interface CartModel {
   title: string;
   price: number;
+  image: string;
+  units?: number;
   category: {
     id: number;
     name: string;
   };
-  image: string;
 }

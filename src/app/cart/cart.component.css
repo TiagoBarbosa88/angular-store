@@ -1,5 +1,4 @@
-@media (min-width: 600px ){
-
+@media (min-width: 600px) {
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -30,7 +29,6 @@
   .content_body {
     width: 100%;
 
-
     .qtd_body {
       margin: 10px;
       width: 20%;
@@ -51,12 +49,9 @@
       margin: auto;
     }
   }
-
-
 }
 
-
-@media (max-width: 600px ){
+@media (max-width: 600px) {
   .content_card {
     display: flex;
     flex-direction: column;
@@ -90,5 +85,4 @@
     flex-direction: column;
     width: 100%;
   }
-
 }

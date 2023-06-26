@@ -7,7 +7,7 @@ import { ToogleThemeService } from './services/toogle-theme.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor(public darkMode: ToogleThemeService) {}
+  constructor(public toogleThemeService: ToogleThemeService) {}
 
   title = 'angular-store';
 }

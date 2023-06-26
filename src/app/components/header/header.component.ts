@@ -10,7 +10,7 @@ import { Category } from 'src/app/shared/model/products';
 })
 export class HeaderComponent {
   constructor(
-    public darkMode: ToogleThemeService,
+    public toogleThemeService: ToogleThemeService,
     public cartService: CartService
   ) {}
 
