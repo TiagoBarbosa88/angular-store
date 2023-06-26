@@ -7,8 +7,11 @@ import { ToogleThemeService } from '../services/toogle-theme.service';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
-  
-  constructor(public darkMode: ToogleThemeService) {}
+
+  constructor(
+    public darkMode: ToogleThemeService,
+
+    ) {}
 
   ngOnInit() {}
 }
