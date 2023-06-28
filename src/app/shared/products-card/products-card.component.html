@@ -1,11 +1,11 @@
 <div
-  class="d-flex flex-wrap justify-content-center gap-4"
+  class="d-flex flex-wrap justify-content-center gap-4 container"
   *ngIf="products$ | async as products"
 >
   <div
-    class="card mt-2 text-center d-flex align-items-center pt-1 pb-1"
+    class="card mt-2 text-center d-flex align-items-center pt-1 pb-1 bg-light"
     style="width: 9rem; height: 16rem"
-    *ngFor="let product of products"
+    *ngFor="let product of products | paginate: { itemsPerPage: pageSize, currentPage: currentPage }"
   >
     <div class="card-img mt-1">
       <img
@@ -34,6 +34,12 @@
         <span (click)="addToCart(product)">Cart</span>
         <mat-icon>add_shopping_cart</mat-icon>
       </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
     </div>
   </div>
 </div>

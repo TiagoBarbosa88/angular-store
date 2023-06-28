@@ -17,6 +17,9 @@ export class ProductsCardComponent implements OnInit {
   @Output() imageClicked = new EventEmitter();
   @Output() addToCartClicked = new EventEmitter();
 
+  public pageSize: number = 10;
+  public currentPage: number = 1;
+
   constructor(
     private productsService: ProductsService,
     public cartService: CartService

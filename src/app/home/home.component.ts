@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   public category!: string | null;
   public categorySubscription!: Subscription;
 
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
