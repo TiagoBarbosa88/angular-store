@@ -1,4 +1,4 @@
-export interface Products {
+export interface Products extends CartModel {
   id: string;
   title: string;
   price: number;
@@ -20,12 +20,9 @@ export interface Category {
 }
 
 export interface CartModel {
+  id: string;
   title: string;
   price: number;
   image: string;
-  units?: number;
-  category: {
-    id: number;
-    name: string;
-  };
+  units: number;
 }

@@ -26,8 +26,7 @@ export class HomeComponent implements OnInit {
     this.categorySubscription = this.route.paramMap.subscribe(
       (params: ParamMap) => {
         this.category = params.get('category');
-        console.log(this.category);
-
+        
         this.productService.returnAllProducts(this.category);
       }
     );

@@ -39,6 +39,14 @@ export class ProductsCardComponent implements OnInit {
   }
 
   public addToCart(product: CartModel) {
-    this.cartService.addCartModel(product);
+    const productAdd = {
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      image: product.image,
+      units: product.units = 1
+    }
+
+    this.cartService.addCartModel(productAdd);
   }
 }

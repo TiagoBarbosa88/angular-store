@@ -37,10 +37,13 @@
           </div>
 
           <div class="content_price w-25 ms-4">
-            <span class="fs-8">{{ product.price | currency : "BRL" }}</span>
+            <span class="fs-8">{{ product.price  | currency : "BRL" }}</span>
+          </div>
+          <div class="content_price w-25 ms-4">
+            <span class="fs-8">{{ product.price * product.units | currency : "BRL" }}</span>
           </div>
           <div class="content_remove text-secondary">
-            <mat-icon class="mat-18">delete</mat-icon>
+            <mat-icon class="mat-18 me-3">delete</mat-icon>
           </div>
         </div>
       </div>

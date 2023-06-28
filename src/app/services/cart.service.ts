@@ -14,15 +14,24 @@ export class CartService {
   constructor() {}
 
   public addCartModel(products: CartModel) {
+    const existingProduct = this.productsCart.find(p => p.id === products.id);
+    if(existingProduct){
+      existingProduct.units += products.units ?? 0
+
+
+    } else {
+      this.productsCart.push(products);
+
+    }
+
     this._cartObservable.next(this.productsCart);
-    return this.productsCart.push(products);
+
   }
 
   public carlcularTotal(): number {
-    let total = 0;
-    for (const product of this.productsCart) {
-      total += product.price;
-    }
-    return total;
+    //const totalUnits = this.productsCart.reduce((acc, product) => acc + product.units, 0);
+    const totalPrice = this.productsCart.reduce((acc, product) => acc + (product.price * product.units), 0);
+
+    return totalPrice;
   }
 }
