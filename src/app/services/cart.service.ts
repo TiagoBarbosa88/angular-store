@@ -17,4 +17,12 @@ export class CartService {
     this._cartObservable.next(this.productsCart);
     return this.productsCart.push(products);
   }
+
+  public carlcularTotal(): number {
+    let total = 0;
+    for (const product of this.productsCart) {
+      total += product.price;
+    }
+    return total;
+  }
 }

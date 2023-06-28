@@ -44,9 +44,9 @@
           </div>
         </div>
       </div>
-      <hr />
     </div>
   </div>
+  <hr />
 
   <!-- Fim Card -->
 
@@ -67,7 +67,7 @@
         <span>
           <p>Subtotal</p>
         </span>
-        <span>R$ 100,00</span>
+        <span>{{ total | currency : "BRL" }}</span>
       </div>
       <hr />
       <div class="content_desc d-flex justify-content-between fs-6">
@@ -75,7 +75,7 @@
           <p>Desconto</p>
         </span>
         <span>
-          <p>R$ 10,00</p>
+          <p>R$ 0,00</p>
         </span>
       </div>
       <hr />
@@ -91,7 +91,7 @@
           <p><strong>Total</strong></p>
         </span>
         <span>
-          <p><strong>R$ 90,00 </strong></p>
+          <p><strong>{{ total | currency : "BRL" }}</strong></p>
         </span>
       </div>
       <hr />
