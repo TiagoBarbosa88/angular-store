@@ -9,7 +9,7 @@
     [ngClass]="toogleThemeService.isDarkMode ? 'bg-dark' : ''"
   >
     <div
-      class="content_product d-flex align-items-center w-100 mb-4 col1"
+      class="content_product d-flex align-items-center w-100 mb-4 col1 bg-light"
       *ngFor="let product of cartObservable$ | async as products"
     >
       <div class="cart_image mb-2">
