@@ -11,21 +11,28 @@ export class CartService {
   public _cartObservable = new BehaviorSubject(this.productsCart);
   public readonly cartObservable$ = this._cartObservable.asObservable();
 
-  constructor() {}
+  constructor() {
+    let existingCart = localStorage.getItem('currentCart')
+    if(existingCart){
+      this.productsCart = JSON.parse(existingCart)
+      localStorage.setItem('currentCart', JSON.stringify(this.productsCart));
+    } else {
+      localStorage.setItem('currentCart', JSON.stringify(this.productsCart));
+    }
+    this._cartObservable.next(this.productsCart);
+  }
 
   public addCartModel(products: CartModel) {
     const existingProduct = this.productsCart.find(p => p.id === products.id);
     if(existingProduct){
       existingProduct.units += products.units ?? 0
-
-
-    } else {
+      localStorage.setItem('currentCart', JSON.stringify(this.productsCart))
+      this._cartObservable.next(this.productsCart);
+    }else {
       this.productsCart.push(products);
-
+      localStorage.setItem('currentCart', JSON.stringify(this.productsCart))
+      this._cartObservable.next(this.productsCart);
     }
-
-    this._cartObservable.next(this.productsCart);
-
   }
 
   public carlcularTotal(): number {

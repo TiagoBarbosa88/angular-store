@@ -1,10 +1,11 @@
 <div
+  *ngIf="cartService.productsCart.length > 0"
   class="container"
   [ngClass]="toogleThemeService.isDarkMode ? 'dark-mode' : ''"
-  *ngIf="cartObservable$ | async as product"
 >
   <!-- Começo do cart -->
   <div
+    *ngIf="cartObservable$ | async;  cleanCart"
     class="content_card mt-3 h-75"
     [ngClass]="toogleThemeService.isDarkMode ? 'bg-dark' : ''"
   >
@@ -56,15 +57,14 @@
   <!-- lado direito -->
 
   <div
-    class="container_total mt-3 col h-75"
-    [ngClass]="toogleThemeService.isDarkMode ? 'bg-dark' : 'bg-light'"
+
+    [ngClass]="toogleThemeService.isDarkMode ? 'container_total mt-3 col h-75 bg-dark' : 'container_total mt-3 col h-75 bg-light'"
   >
     <div class="text-center fs-3 text-center">
       <h1><strong>Cart Total</strong></h1>
     </div>
     <div
       class="content_cart_total d-flex flex-column w-75 align-self-center"
-      *ngIf="cartObservable$ | async"
     >
       <div class="content_subtotal d-flex justify-content-between fs-6">
         <span>
@@ -104,3 +104,8 @@
     </div>
   </div>
 </div>
+
+<ng-container #cleanCart>
+<h1>Carrinho vazio</h1>
+</ng-container>
+
