@@ -17,6 +17,10 @@ const routes: Routes = [
     loadChildren: () => import('./cart/cart.module').then((m) => m.CartModule),
   },
   {
+    path: 'auth',
+    loadChildren: () => import('./authentication/authentication.module').then((m) => m.AuthenticationModule),
+  },
+  {
     path: '**',
     component: HomeComponent,
   },
