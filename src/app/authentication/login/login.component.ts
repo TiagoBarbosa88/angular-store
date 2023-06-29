@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,7 +11,7 @@ import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angula
 })
 export class LoginComponent implements OnInit {
 
-  email = new FormControl('', [Validators.required, Validators.email]);
+   email = new FormControl('', [Validators.required, Validators.email]);
 
   getErrorMessage() {
     if (this.email.hasError('required')) {
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit {
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit() {
   }

@@ -10,6 +10,13 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+* {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .mat-icon {
   cursor: pointer;
 }

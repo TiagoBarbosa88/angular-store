@@ -1,71 +1,75 @@
-<nav
-  class="navbar navbar-expand-lg navbar-dark"
-  [ngClass]="toogleThemeService.isDarkMode ? 'nav-dark' : 'bg-primary'"
->
-  <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center" routerLink="">
-      <mat-icon routerLink="/cart" class="mat-20">shopping_cart_checkout</mat-icon>
-      Store</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-      data-bs-parent="#navbarSupportedContent"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div
-      class="collapse navbar-collapse"
-      id="navbarSupportedContent"
-      data-bs-parent="#navbarSupportedContent"
-    >
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item" *ngFor="let category of categories">
-          <a class="nav-link" routerLink="{{ category.link }}">{{
-            category.name
-          }}</a>
-        </li>
-      </ul>
-      <div class="cart">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-light me-2">
-          <li class="me-1">
-            <mat-icon routerLink="/cart" class="mat-icon-custom mat-icon-outlined">shopping_cart</mat-icon>
-            <span
-              class="position-absolute translate-middle badge rounded-pill bg-danger"
-            >
-              {{ cartService.productsCart.length }}
-            </span>
-          </li>
-          <li class="me-1">
-            <a routerLink="/auth/login" class="login text-light">
-              <mat-icon>person</mat-icon>
-            </a>
+<ng-container *ngIf="showNavigation">
+  <nav
+    class="navbar navbar-expand-lg navbar-dark"
+    [ngClass]="toogleThemeService.isDarkMode ? 'nav-dark' : 'bg-primary'"
+
+  >
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" routerLink="">
+        <mat-icon routerLink="/cart" class="mat-20">shopping_cart_checkout</mat-icon>
+        Store</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        data-bs-parent="#navbarSupportedContent"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse"
+        id="navbarSupportedContent"
+        data-bs-parent="#navbarSupportedContent"
+      >
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" *ngFor="let category of categories">
+            <a class="nav-link" routerLink="{{ category.link }}">{{
+              category.name
+            }}</a>
           </li>
         </ul>
-      </div>
-      <div class="toogle__mode">
-        <button
-          type="checkbox"
-          mat-icon-button
-          class="icon-dark"
-          (click)="toogleThemeService.toogleThemeService()"
-        >
-          <mat-icon
+        <div class="cart">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-light me-2">
+            <li class="me-1">
+              <mat-icon routerLink="/cart" class="mat-icon-custom mat-icon-outlined">shopping_cart</mat-icon>
+              <span
+                class="position-absolute translate-middle badge rounded-pill bg-danger"
+              >
+                {{ cartService.productsCart.length }}
+              </span>
+            </li>
+            <li class="me-1">
+              <a (click)="navigateToLogin()" class="login text-light">
+                <mat-icon>person</mat-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="toogle__mode">
+          <button
+            type="checkbox"
+            mat-icon-button
             class="icon-dark"
-            *ngIf="!toogleThemeService.isDarkMode"
-            >dark_mode</mat-icon
+            (click)="toogleThemeService.toogleThemeService()"
           >
-          <mat-icon
-            class="icon-dark"
-            *ngIf="toogleThemeService.isDarkMode"
-            >light_mode</mat-icon
-          >
-        </button>
+            <mat-icon
+              class="icon-dark"
+              *ngIf="!toogleThemeService.isDarkMode"
+              >dark_mode</mat-icon
+            >
+            <mat-icon
+              class="icon-dark"
+              *ngIf="toogleThemeService.isDarkMode"
+              >light_mode</mat-icon
+            >
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</ng-container>
+

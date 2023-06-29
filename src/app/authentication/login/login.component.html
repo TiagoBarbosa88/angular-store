@@ -1,6 +1,14 @@
-<div class="container d-flex align-items-center justify-content-center">
+<div class="container d-flex flex-column align-items-center justify-content-center">
 
-  <div class="form-container d-flex flex-column">
+  <div class="logo m-2">
+
+    <mat-icon class="mat-18" routerLink="">add_shopping_cart
+    </mat-icon>
+    <a class="logo_store" routerLink="/products">
+      Store</a>
+  </div>
+
+  <div class="form-container d-flex flex-column m-3 bg-light">
     <h1>Fazer login</h1>
     <div class="body__form">
 
@@ -19,13 +27,21 @@
         <mat-hint>Password</mat-hint>
       </mat-form-field>
 
-      <div class="button w-100">
+      <div class="button w-100 mt-2">
         <button mat-raised-button color="primary" class="w-100">Entrar</button>
       </div>
 
+      <div class="help mt-3 mb-3 d-flex">
+        <a href="#" class="m-2">
+          <span>Precisa de ajuda </span>
+        </a>
+        <mat-icon matSuffix>help</mat-icon>
+      </div>
+      <hr>
 
-
-
+      <div class="button w-100 mt-4">
+        <button mat-raised-button color="basic" class="w-100">Criar sua conta</button>
+      </div>
     </div>
 
 
