@@ -9,11 +9,18 @@
   </div>
 
   <div class="form-container d-flex flex-column m-3 bg-light">
-    <h1>Fazer login</h1>
+    <h1>Register</h1>
     <div class="body__form">
 
       <mat-form-field appearance="outline">
-        <mat-label>Enter your email</mat-label>
+        <mat-label>Register your name</mat-label>
+        <input matInput placeholder="Name">
+        <mat-icon matSuffix>person</mat-icon>
+        <mat-hint>Name</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Register your email</mat-label>
         <input matInput placeholder="example@example.com" [formControl]="email" required>
         <mat-icon matSuffix>email</mat-icon>
         <mat-hint>Email</mat-hint>
@@ -21,14 +28,21 @@
       </mat-form-field>
 
       <mat-form-field appearance="outline">
-        <mat-label>Enter your password</mat-label>
+        <mat-label>Register your password</mat-label>
         <input matInput placeholder="Password">
         <mat-icon matSuffix>password</mat-icon>
         <mat-hint>Password</mat-hint>
       </mat-form-field>
 
+      <mat-form-field appearance="outline">
+        <mat-label>Confirm your password</mat-label>
+        <input matInput placeholder="Confirm Password">
+        <mat-icon matSuffix>password</mat-icon>
+        <mat-hint>Password</mat-hint>
+      </mat-form-field>
+
       <div class="button w-100 mt-2">
-        <button mat-raised-button color="primary" class="w-100">Entrar</button>
+        <button mat-raised-button color="primary" class="w-100">Register</button>
       </div>
 
       <div class="help mt-3 mb-3 d-flex">
@@ -40,7 +54,7 @@
       <hr>
 
       <div class="button w-100 mt-4">
-        <button mat-raised-button color="basic" class="w-100" routerLink="/auth/register">Criar sua conta</button>
+        <button mat-raised-button color="basic" class="w-100" routerLink="/auth/login">Login</button>
       </div>
     </div>
 
