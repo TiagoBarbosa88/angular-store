@@ -1,18 +1,40 @@
-nav {
-  width: 100%;
+.logo {
+  font-size: 2rem;
 }
 
-li {
-  cursor: pointer;
+.logo .icon {
+  font-size: 1.6rem;
+}
+.form-inputs{
+  position:relative;
+}
+.form-inputs .form-control{
+  height: 1.6rem;
 }
 
-
-.mat-icon-custom {
-  fill: transparent !important;
+.form-inputs .form-control:focus{
+  box-shadow:none;
+  border:1px solid #000;
 }
 
-/* .mat-icon-transparent {
-  color: white;
-} */
+.form-inputs i{
+  position:absolute;
+  right:10px;
+  top:15px;
+}
 
+.shop-bag{
+  background-color:#000;
+  color:#fff;
+  height:50px;
+  width:50px;
+  font-size:25px;
+  display:flex;
+  border-radius:50%;
+  align-items:center;
+  justify-content:center;
+}
 
+.qty{
+  font-size:.9rem;
+}

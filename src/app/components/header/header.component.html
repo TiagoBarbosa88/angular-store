@@ -1,75 +1,102 @@
 <ng-container *ngIf="showNavigation">
-  <nav
-    class="navbar navbar-expand-lg navbar-dark"
-    [ngClass]="toogleThemeService.isDarkMode ? 'nav-dark' : 'bg-primary'"
-
-  >
+  <nav class="navbar navbar-dark navbar-expand p-0"
+    [ngClass]="toogleThemeService.isDarkMode ? 'header_dark_mode' : 'bg-primary'">
     <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" routerLink="">
-        <mat-icon routerLink="/cart" class="mat-20">shopping_cart_checkout</mat-icon>
-        Store</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-        data-bs-parent="#navbarSupportedContent"
-      >
+      <ul class="navbar-nav d-none d-md-flex mr-auto">
+        <li class="nav-item"><a class="nav-link" href="#" data-abc="true">Cash On Delivery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-abc="true">Free Delivery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-abc="true">Cash Backs</a></li>
+      </ul>
+      <ul class="navbar-nav d-flex align-items-center justify-content-center">
+
+        <li class="nav-item">
+          <div class="d-flex flex-row">
+            <a (click)="navigateToLogin()" class="login mat-icon-custom">
+              <mat-icon>person</mat-icon>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="toogle__mode">
+            <button type="checkbox" mat-icon-button class="icon-dark" (click)="toogleThemeService.toogleThemeService()">
+              <mat-icon class="icon-dark mat-icon-custom" *ngIf="!toogleThemeService.isDarkMode">dark_mode</mat-icon>
+              <mat-icon class="icon-dark mat-icon-custom" *ngIf="toogleThemeService.isDarkMode">light_mode</mat-icon>
+            </button>
+          </div>
+        </li>
+
+      </ul> <!-- list-inline //  -->
+    </div>
+  </nav>
+  <section class="header-main border-bottom " [ngClass]="toogleThemeService.isDarkMode ? 'nav-dark' : 'bg-white'">
+    <div class="container-fluid">
+      <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
+        <div class="col-md-2">
+          <a class="navbar-brand d-flex align-items-center logo" routerLink="">
+            <mat-icon routerLink="/cart" class="icon">shopping_cart_checkout</mat-icon>
+            Store</a>
+        </div>
+        <div class="col-md-8">
+          <div class="d-flex form-inputs">
+            <input class="form-control" type="text" placeholder="Search any product...">
+            <i class="bx bx-search"></i>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="d-flex d-none d-md-flex flex-row align-items-center">
+
+            <span [ngClass]="toogleThemeService.isDarkMode ? 'shop-bag_darkMde' : 'shop-bag'">
+              <mat-icon routerLink="/cart" class="bx bxs-shopping-bag">shopping_cart</mat-icon>
+            </span>
+
+            <div class="d-flex flex-column ms-2">
+              <span class="qty">
+                {{ unitsProducts }}
+              </span>
+              <span class="fw-bold">
+                {{ totalCart }}
+              </span>
+
+              <ng-template #carrinho>
+                <div class="d-flex row " >
+                  <span>Carrinho Vazio</span>
+                </div>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand d-md-none d-md-flex" href="#">Categories</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div
-        class="collapse navbar-collapse"
-        id="navbarSupportedContent"
-        data-bs-parent="#navbarSupportedContent"
-      >
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item" *ngFor="let category of categories">
-            <a class="nav-link" routerLink="{{ category.link }}">{{
-              category.name
-            }}</a>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Electronics</a>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li class="nav-item" *ngFor="let category of categories">
+                <a class="nav-link" routerLink="{{ category.link }}">{{
+                  category.name
+                  }}</a>
+              </li>
+            </ul>
           </li>
         </ul>
-        <div class="cart">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-light me-2">
-            <li class="me-1">
-              <mat-icon routerLink="/cart" class="mat-icon-custom mat-icon-outlined">shopping_cart</mat-icon>
-              <span
-                class="position-absolute translate-middle badge rounded-pill bg-danger"
-              >
-                {{ cartService.productsCart.length }}
-              </span>
-            </li>
-            <li class="me-1">
-              <a (click)="navigateToLogin()" class="login text-light">
-                <mat-icon>person</mat-icon>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="toogle__mode">
-          <button
-            type="checkbox"
-            mat-icon-button
-            class="icon-dark"
-            (click)="toogleThemeService.toogleThemeService()"
-          >
-            <mat-icon
-              class="icon-dark"
-              *ngIf="!toogleThemeService.isDarkMode"
-              >dark_mode</mat-icon
-            >
-            <mat-icon
-              class="icon-dark"
-              *ngIf="toogleThemeService.isDarkMode"
-              >light_mode</mat-icon
-            >
-          </button>
-        </div>
       </div>
     </div>
   </nav>
 </ng-container>
-

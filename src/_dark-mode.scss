@@ -18,6 +18,27 @@ body {
   background-color: rgb(26, 25, 25);
 }
 
+.header_dark_mode {
+  background-color:#494848;
+}
+
 .icon-dark {
   color: white;
+}
+
+
+li a {
+  color: #fff;
+}
+
+.shop-bag_darkMde{
+  background-color:#494848;
+  color:#fff;
+  height:50px;
+  width:50px;
+  font-size:25px;
+  display:flex;
+  border-radius:50%;
+  align-items:center;
+  justify-content:center;
 }
