@@ -50,20 +50,25 @@
               <mat-icon routerLink="/cart" class="bx bxs-shopping-bag">shopping_cart</mat-icon>
             </span>
 
-            <div class="d-flex flex-column ms-2">
-              <span class="qty">
-                {{ unitsProducts }}
-              </span>
-              <span class="fw-bold">
-                {{ totalCart }}
-              </span>
-
-              <ng-template #carrinho>
-                <div class="d-flex row " >
-                  <span>Carrinho Vazio</span>
-                </div>
-              </ng-template>
+            <div *ngIf="cartService.productsCart.length > 0; else carrinho">
+              <div class="d-flex flex-column ms-2">
+                <span class="qty">
+                  {{ cartService.productsCart.length }}
+                </span>
+                <span class="fw-bold">
+                  {{ cartService.calculateTotal() }}
+                </span>
+              </div>
             </div>
+
+
+            <ng-template #carrinho>
+              <div class="container">
+                <div class="d-flex carrinho ms-1 align-items-center text-center">
+                  <span>Carrinho vazio</span>
+                </div>
+              </div>
+            </ng-template>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ import { CartService } from '../services/cart.service';
 })
 export class CartComponent implements OnInit {
   public cartObservable$ = this.cartService.cartObservable$;
-  total: number = 0;
+
 
   constructor(
     public toogleThemeService: ToogleThemeService,
@@ -17,10 +17,7 @@ export class CartComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.calculateTotal();
+    
   }
 
-  calculateTotal(){
-    this.total = this.cartService.carlcularTotal()
-  }
 }

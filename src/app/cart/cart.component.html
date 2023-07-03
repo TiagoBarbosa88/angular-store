@@ -70,7 +70,7 @@
         <span>
           <p>Subtotal</p>
         </span>
-        <span>{{ total | currency : "BRL" }}</span>
+        <span>{{ cartService.calculateTotal() }}</span>
       </div>
       <hr />
       <div class="content_desc d-flex justify-content-between fs-6">
@@ -94,7 +94,7 @@
           <p><strong>Total</strong></p>
         </span>
         <span>
-          <p><strong>{{ total | currency : "BRL" }}</strong></p>
+          <p><strong>{{ cartService.calculateTotal() }}</strong></p>
         </span>
       </div>
       <hr />

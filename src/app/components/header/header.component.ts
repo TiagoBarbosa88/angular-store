@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 import { NavigationService } from 'src/app/services/navigation.service';
 import { ToogleThemeService } from 'src/app/services/toogle-theme.service';
@@ -11,28 +11,19 @@ import { Category } from 'src/app/shared/model/products';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-
-
   public showNavigation = true;
-
-  public totalCart!: number
-  public unitsProducts!: number 
 
   constructor(
     public toogleThemeService: ToogleThemeService,
     public cartService: CartService,
     private router: Router,
-    private route: ActivatedRoute,
     private navigationService: NavigationService
-    ) {}
+  ) {}
 
   ngOnInit(): void {
     this.navigationService.showNavigation$.subscribe((showNavigation) => {
       this.showNavigation = showNavigation;
     });
-
-    this.totalCart = this.cartService.carlcularTotal()
-    this.unitsProducts = this.cartService.productsCart.length
   }
 
   categories: Category[] = [
@@ -54,14 +45,13 @@ export class HeaderComponent implements OnInit {
     },
   ];
 
-
   public navigateToLogin() {
     this.navigationService.updateShowNavigationState(false);
 
     this.router.navigate(['/auth/login']);
   }
 
-/*   public navigateToLogin(){
+  /*   public navigateToLogin(){
     this.showNavigation = false
 
     if(this.showNavigation === false) {
@@ -79,7 +69,7 @@ export class HeaderComponent implements OnInit {
     }
   }
  */
-/*
+  /*
   public navigateToLogin(){
     this.showNavigation = false
     const currtenUrl = this.router.url
