@@ -56,7 +56,7 @@
                   {{ cartService.productsCart.length }}
                 </span>
                 <span class="fw-bold">
-                  {{ cartService.calculateTotal() }}
+                  {{ cartService.calculateTotal() | currency: 'BRL' }}
                 </span>
               </div>
             </div>
